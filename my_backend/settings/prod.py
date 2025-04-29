@@ -9,4 +9,8 @@ ALLOWED_HOSTS = ['realestate-prod-fdf77c6bb00a.herokuapp.com']
 
 SECRET_KEY = os.environ['SECRET_KEY']
 
-DATABASES = dj_database_url.config()
+DATABASES = {
+    'default': dj_database_url.config()
+}
+
+
