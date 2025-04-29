@@ -1,2 +1,2 @@
-release: python manage.py mygrate
+release: python manage.py migrate
 web: gunicorn my_backend.wsgi
