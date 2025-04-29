@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.property {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.property img {
+    max-width: 100%;
+    height: auto;
+}
+
+.property-details {
+    padding: 15px;
+}
+
+.property-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 0 10px;
+}
+
+.property-location {
+    font-size: 14px;
+    color: #666;
+    margin: 0 0 10px;
+}
+
+.property-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #28a745;
+}

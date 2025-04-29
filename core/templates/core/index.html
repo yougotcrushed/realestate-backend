@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Real Estate Listings</title>
+    <link rel="stylesheet" href="{% static 'core/styles.css' %}" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Available Properties</h1>
+      <div>
+        {% for property in properties %}
+        <div class="property">
+          {% if property.images %}
+          <img
+            src="{{ property.images.0.image.url }}"
+            alt="{{ property.title }}"
+          />
+          {% else %}
+          <p>No images available</p>
+          {% endif %}
+          <div class="property-details">
+            <h2 class="property-title">{{ property.title }}</h2>
+            <p class="property-location">
+              {{ property.city }}, {{ property.state }}
+            </p>
+            <p class="property-description">{{ property.description }}</p>
+            <p class="property-price">${{ property.price }}</p>
+            <p class="property-bedrooms">Bedrooms: {{ property.bedroom }}</p>
+            <p class="property-bathrooms">Bathrooms: {{ property.bathroom }}</p>
+            <p class="property-size">Size: {{ property.square_feet }} sq ft</p>
+            <p class="property-lot">Lot Size: {{ property.lot_size }} acres</p>
+          </div>
+        </div>
+        {% empty %}
+        <p>No properties available at the moment.</p>
+        {% endfor %}
+      </div>
+    </div>
+  </body>
+</html>
