@@ -15,6 +15,7 @@ djangorestframework-simplejwt = "*"
 whitenoise = "*"
 gunicorn = "*"
 dj-database-url = "*"
+mysqlclient = "*"
 
 [dev-packages]
 
