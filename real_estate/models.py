@@ -25,18 +25,18 @@ class Client(models.Model):
         ordering = ['user__first_name', 'user__last_name']
     
 class Property(models.Model):
-    PROPERTY_TYPE_HOUSE = 'H'
-    PROPERTY_TYPE_APARTMENT = 'A'
-    PROPERTY_TYPE_LAND = 'L'
+    PROPERTY_TYPE_HOUSE = 'house'
+    PROPERTY_TYPE_APARTMENT = 'apartment'
+    PROPERTY_TYPE_LAND = 'land'
     PROPERTY_TYPE_CHOICES = [
         (PROPERTY_TYPE_HOUSE, 'House'),
         (PROPERTY_TYPE_APARTMENT, 'Apartment'),
         (PROPERTY_TYPE_LAND, 'Land'),
     ]
 
-    STATUS_FOR_SELL = 'F'
-    STATUS_SOLD = 'S'
-    STATUS_PENDING = 'P'
+    STATUS_FOR_SELL = 'for sale'
+    STATUS_SOLD = 'sold'
+    STATUS_PENDING = 'pending'
     STATUS_CHIOCES = [
         (STATUS_FOR_SELL, 'For Sale'),
         (STATUS_SOLD, 'Sold'),
