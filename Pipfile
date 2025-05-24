@@ -16,6 +16,8 @@ whitenoise = "*"
 gunicorn = "*"
 dj-database-url = "*"
 mysqlclient = "*"
+cloudinary = "*"
+django-cloudinary-storage = "*"
 
 [dev-packages]
 

@@ -68,7 +68,7 @@ class Property(models.Model):
 
 class PropertyImage(models.Model):
     property = models.ForeignKey(Property, on_delete=models.CASCADE, related_name='images')
-    image = models.ImageField(validators=[validate_image_size], upload_to='real_estate/images', blank=True, null=True)
+    image = models.ImageField(validators=[validate_image_size], upload_to='properties/', blank=True, null=True)
     caption = models.CharField(max_length=200, blank=True)
 
     def __str__(self):
